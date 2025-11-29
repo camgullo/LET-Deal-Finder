@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LowEndTalk Deal Finder",
+  "version": "1.0",
+  "description": "Helps you find deals by filtering posts from Providers and Host Reps on LowEndTalk.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lowendtalk.com/*", "https://www.lowendtalk.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
